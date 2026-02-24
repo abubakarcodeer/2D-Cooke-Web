@@ -15,6 +15,9 @@ body {
   margin: auto;
   padding: 0 1vw;
 }
+.menu-btn, .drop-menu{
+  display: none;
+}
 
 ul {
   list-style-type: none;
@@ -37,6 +40,7 @@ a {
 
 .hero-section {
   height: 100vh;
+  position: relative;
 }
 .hero-section .container {
   height: 100%;
@@ -184,4 +188,50 @@ a {
   top: -35%;
   filter: drop-shadow(0 10px 5px rgba(37, 35, 34, 0.0745098039));
   transition: all 0.1s;
+}
+
+@media (max-width:999px) {
+  .menu,.cta-btn{
+    display: none;
+  }
+  .menu-btn{
+    display: inline;
+  }
+  .menu-btn i{
+    font-size: 30px;
+  }
+  .drop-menu .menu-close{
+    width: 92%;
+    display: flex;
+    justify-content: end;
+  }
+  .drop-menu i{
+    font-size: 30px;
+  }
+  .drop-menu.active{
+    display: inline;
+  }
+  .drop-menu{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 20px;
+  backdrop-filter: blur(5px);
+  width: 100vw;
+  background-color: rgba(255, 255, 255, 0.7); 
+  height: 100vh;
+  z-index: 99;
+}
+.drop-menu ul{
+  text-align: center;
+}
+.drop-menu ul li{
+  margin-top: 50px;
+  font-size: 30px;
+}
+.buy-btn{
+  display: inline;
+}
 }
